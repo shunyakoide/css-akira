@@ -17,7 +17,7 @@ body {
   overflow: hidden;
 }
 
-.Centering, .akira-container, .akira-container .front-tire__wheel, .akira-container .back-tire__wheel, .akira-container .back-tire__wheel__center {
+.Centering, .akira-container, .akira-container .front-tire__wheel, .akira-container .back-tire__wheel, .akira-container .back-tire__wheel__center, .akira-container .front-deck3__handle::before {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -52,7 +52,7 @@ body {
 .akira-container .back-tire {
   position: absolute;
   bottom: calc(120 * var(--unit));
-  right: calc(40 * var(--unit));
+  right: calc(60 * var(--unit));
   width: calc(200 * var(--unit));
   height: calc(200 * var(--unit));
   border-radius: 50%;
@@ -99,33 +99,34 @@ body {
 
 .akira-container .back-tire-arm {
   position: absolute;
-  top: calc(175 * var(--unit));
-  right: calc(175 * var(--unit));
+  top: calc(182 * var(--unit));
+  right: calc(178 * var(--unit));
   width: calc(100 * var(--unit));
   height: calc(130 * var(--unit));
   -webkit-transform: rotate(-65deg);
           transform: rotate(-65deg);
+  z-index: 10;
 }
 
 .akira-container .back-tire-arm__first {
   position: absolute;
-  bottom: 0%;
+  bottom: 18%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  width: calc(80 * var(--unit));
+  width: calc(70 * var(--unit));
   height: calc(60 * var(--unit));
   background: lightblue;
 }
 
 .akira-container .back-tire-arm__second {
   position: absolute;
-  bottom: 10%;
+  bottom: 20%;
   left: 50%;
   -webkit-transform: translate(-50%, -10%);
           transform: translate(-50%, -10%);
   margin-bottom: 1rem;
-  width: calc(80 * var(--unit));
+  width: calc(70 * var(--unit));
   height: calc(50 * var(--unit));
   background: pink;
 }
@@ -137,19 +138,99 @@ body {
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
   margin-bottom: 1rem;
-  width: calc(100 * var(--unit));
-  height: calc(70 * var(--unit));
+  width: calc(70 * var(--unit));
+  height: calc(40 * var(--unit));
   background: orange;
+}
+
+.akira-container .back-tire-arm__third::before, .akira-container .back-tire-arm__third::after {
+  content: "";
+  position: absolute;
+  top: 12%;
+  left: 0%;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+          transform: translate(-50%, 0%) rotate(45deg);
+  margin-bottom: 1rem;
+  width: calc(30 * var(--unit));
+  height: calc(30 * var(--unit));
+  background: green;
+}
+
+.akira-container .back-tire-arm__third::after {
+  left: 100%;
+}
+
+.akira-container .middle-display1 {
+  position: absolute;
+  bottom: 53%;
+  left: 42%;
+  width: calc(60 * var(--unit));
+  height: calc(30 * var(--unit));
+  background: red;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+.akira-container .middle-display2 {
+  position: absolute;
+  bottom: 44%;
+  left: 49.5%;
+  width: calc(80 * var(--unit));
+  height: calc(30 * var(--unit));
+  background: red;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+.akira-container .seat {
+  position: absolute;
+  bottom: 35%;
+  left: 57%;
+  width: calc(70 * var(--unit));
+  height: calc(200 * var(--unit));
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+.akira-container .seat__bottom {
+  position: absolute;
+  bottom: 12%;
+  left: 10%;
+  width: calc(70 * var(--unit));
+  height: calc(40 * var(--unit));
+  background: green;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+.akira-container .seat__back {
+  position: absolute;
+  bottom: 12%;
+  right: 5%;
+  width: 16%;
+  height: 78%;
+  background: green;
+}
+
+.akira-container .seat__head {
+  position: absolute;
+  top: -5%;
+  left: 94%;
+  width: 16%;
+  height: 20%;
+  background: green;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
 }
 
 .akira-container .body-tank {
   position: absolute;
-  top: 43%;
-  left: 30%;
-  width: calc(230 * var(--unit));
-  height: calc(130 * var(--unit));
+  top: 46%;
+  left: 33%;
+  width: calc(210 * var(--unit));
+  height: calc(120 * var(--unit));
   background: green;
-  border-radius: 30% 0% 100% 70% / 30% 0% 100% 70%;
+  border-radius: 0% 0% 70% 30% / 0% 0% 70% 30%;
   -webkit-transform: rotate(35deg);
           transform: rotate(35deg);
 }
@@ -171,13 +252,12 @@ body {
   left: calc(270 * var(--unit));
   width: calc(470 * var(--unit));
   height: calc(260 * var(--unit));
-  border: 1px solid #000;
 }
 
 .akira-container .body-seat__step1 {
   position: absolute;
   bottom: 25%;
-  left: -3%;
+  left: 0.5%;
   width: calc(70 * var(--unit));
   height: calc(20 * var(--unit));
   background: red;
@@ -201,7 +281,7 @@ body {
 .akira-container .body-seat__step2 {
   position: absolute;
   bottom: 7%;
-  left: 6.5%;
+  left: 9.5%;
   width: calc(95 * var(--unit));
   height: calc(19 * var(--unit));
   background: red;
@@ -225,8 +305,8 @@ body {
 .akira-container .body-seat__bottom {
   position: absolute;
   bottom: 0%;
-  left: 25%;
-  width: calc(120 * var(--unit));
+  left: 35%;
+  width: calc(100 * var(--unit));
   height: calc(20 * var(--unit));
   background: red;
 }
@@ -267,13 +347,49 @@ body {
 
 .akira-container .body-seat__back {
   position: absolute;
-  top: 15%;
+  top: 25%;
   left: 65%;
   width: calc(40 * var(--unit));
-  height: calc(180 * var(--unit));
+  height: calc(130 * var(--unit));
   background: red;
   -webkit-transform: rotate(25deg);
           transform: rotate(25deg);
+}
+
+.akira-container .body-seat__back::before {
+  content: "";
+  position: absolute;
+  top: -22%;
+  right: 2%;
+  width: calc(30 * var(--unit));
+  height: calc(40 * var(--unit));
+  background: red;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+.akira-container .body-seat__back__head {
+  position: absolute;
+  top: -45%;
+  left: 48%;
+  width: calc(80 * var(--unit));
+  height: calc(45 * var(--unit));
+  background: red;
+  border-radius: 0% 100% 0% 0% / 0% 100% 0% 0%;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+
+.akira-container .body-seat__back__head::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: -18%;
+  width: calc(30 * var(--unit));
+  height: calc(40 * var(--unit));
+  background: red;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
 }
 
 .akira-container .body-seat__back-bottom {
@@ -337,7 +453,7 @@ body {
   position: absolute;
   top: 31%;
   left: 17.5%;
-  width: calc(205 * var(--unit));
+  width: calc(225 * var(--unit));
   height: calc(50 * var(--unit));
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
@@ -359,12 +475,115 @@ body {
   position: absolute;
   top: 39%;
   left: 20%;
-  width: calc(205 * var(--unit));
+  width: calc(225 * var(--unit));
   height: calc(90 * var(--unit));
   background: orange;
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
   -webkit-clip-path: polygon(-8.76% -16px, 95.69% -48.99%, 115.74% 34.85%, -17px 106.76%);
           clip-path: polygon(-8.76% -16px, 95.69% -48.99%, 115.74% 34.85%, -17px 106.76%);
+}
+
+.akira-container .front-deck1 {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  width: calc(80 * var(--unit));
+  height: calc(30 * var(--unit));
+  background: orange;
+  border-radius: 5px 0 0 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: skew(-50deg);
+          transform: skew(-50deg);
+}
+
+.akira-container .front-deck2 {
+  position: absolute;
+  top: 31%;
+  left: 26%;
+  width: calc(100 * var(--unit));
+  height: calc(36 * var(--unit));
+  background: green;
+  border-radius: 100% 0% 0% 0% / 100% 0% 0% 0%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.akira-container .front-deck3 {
+  position: absolute;
+  top: 26%;
+  left: 36%;
+  width: calc(60 * var(--unit));
+  height: calc(50 * var(--unit));
+  background: red;
+  border-radius: 5px 5px 0 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: skew(-45deg);
+          transform: skew(-45deg);
+}
+
+.akira-container .front-deck3__display {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  width: calc(75 * var(--unit));
+  height: calc(35 * var(--unit));
+  background: blue;
+  border-radius: 100% 5px 3px 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: skew(-125deg);
+          transform: skew(-125deg);
+}
+
+.akira-container .front-deck3__handle {
+  position: absolute;
+  top: 30%;
+  left: 100%;
+  width: calc(20 * var(--unit));
+  height: calc(20 * var(--unit));
+  background: lightblue;
+  border-radius: 50%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+}
+
+.akira-container .front-deck3__handle::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: green;
+}
+
+.akira-container .front-shield {
+  opacity: 0.5;
+  position: absolute;
+  top: 20%;
+  left: 16.5%;
+  width: calc(280 * var(--unit));
+  height: calc(82 * var(--unit));
+  background: radial-gradient(circle farthest-side at 98% 100%, transparent 20%, orange 20%);
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  border-radius: 88% 0% 100% 18% / 100% 0% 0% 0%;
+}
+
+.akira-container .front-shield-back {
+  opacity: 0;
+  position: absolute;
+  top: 25%;
+  left: 18%;
+  width: calc(230 * var(--unit));
+  height: calc(80 * var(--unit));
+  background: radial-gradient(circle farthest-side at 120% 120%, transparent 32%, blue 32%);
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  border-radius: 88% 0% 100% 18% / 100% 0% 0% 0%;
 }
 /*# sourceMappingURL=style.css.map */
