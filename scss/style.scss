@@ -1,0 +1,374 @@
+// COLORS //
+$bg: #fff;
+
+//Root
+
+:root {
+  --size: 50;
+  --unit: calc((var(--size) / 500) * 1vmin);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  background: $bg;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.Centering {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.akira-container {
+  position: fixed;
+  @extend .Centering;
+  width: calc(900 * var(--unit));
+  height: calc(500 * var(--unit));
+  border: 1px solid #000;
+
+  .front-tire {
+    position: absolute;
+    bottom: calc(120 * var(--unit));
+    left: calc(60 * var(--unit));
+    width: calc(180 * var(--unit));
+    height: calc(180 * var(--unit));
+    border-radius: 50%;
+    background: #000;
+
+    &__wheel {
+      position: absolute;
+      @extend .Centering;
+      width: 70%;
+      height: 70%;
+      border-radius: 50%;
+      background: red;
+    }
+  }
+
+  .back-tire {
+    position: absolute;
+    bottom: calc(120 * var(--unit));
+    right: calc(40 * var(--unit));
+    width: calc(200 * var(--unit));
+    height: calc(200 * var(--unit));
+    border-radius: 50%;
+    background: #000;
+
+    &__wheel {
+      position: absolute;
+      @extend .Centering;
+      width: 65%;
+      height: 65%;
+      border-radius: 50%;
+      background: red;
+
+      &__center {
+        position: absolute;
+        @extend .Centering;
+        width: 75%;
+        height: 75%;
+        border-radius: 50%;
+        background: orange;
+      }
+    }
+
+    &__b-screw {
+      position: absolute;
+      top: 30%;
+      left: 65%;
+      width: calc(30 * var(--unit));
+      height: calc(30 * var(--unit));
+      border-radius: 50%;
+      background: blue;
+      border: 2px solid grey;
+    }
+
+    &__s-screw {
+      position: absolute;
+      top: 70%;
+      left: 45%;
+      width: calc(20 * var(--unit));
+      height: calc(20 * var(--unit));
+      border-radius: 50%;
+      background: blue;
+      border: 2px solid grey;
+    }
+  }
+
+  .back-tire-arm {
+    position: absolute;
+    top: calc(175 * var(--unit));
+    right: calc(175 * var(--unit));
+    width: calc(100 * var(--unit));
+    height: calc(130 * var(--unit));
+    // background: green;
+    transform: rotate(-65deg);
+
+    &__first {
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: calc(80 * var(--unit));
+      height: calc(60 * var(--unit));
+      background: lightblue;
+    }
+
+    &__second {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translate(-50%, -10%);
+      margin-bottom: 1rem;
+      width: calc(80 * var(--unit));
+      height: calc(50 * var(--unit));
+      background: pink;
+    }
+
+    &__third {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin-bottom: 1rem;
+      width: calc(100 * var(--unit));
+      height: calc(70 * var(--unit));
+      background: orange;
+    }
+  }
+
+  .body-tank {
+    position: absolute;
+    top: 43%;
+    left: 30%;
+    width: calc(230 * var(--unit));
+    height: calc(130 * var(--unit));
+    // border: 1px solid #000;
+    background: green;
+    border-radius: 30% 0% 100% 70% / 30% 0% 100% 70%;
+    transform: rotate(35deg);
+
+    &__screw {
+      position: absolute;
+      top: -16%;
+      left: 40%;
+      width: calc(45 * var(--unit));
+      height: calc(45 * var(--unit));
+      border: 5px solid green;
+      border-radius: 50%;
+      background: red;
+    }
+  }
+
+  .body-seat {
+    position: absolute;
+    top: calc(100 * var(--unit));
+    left: calc(270 * var(--unit));
+    width: calc(470 * var(--unit));
+    height: calc(260 * var(--unit));
+    border: 1px solid #000;
+
+    &__step1 {
+      position: absolute;
+      bottom: 25%;
+      left: -3%;
+      width: calc(70 * var(--unit));
+      height: calc(20 * var(--unit));
+      background: red;
+      transform: rotate(60deg);
+      overflow: hidden;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: -25%;
+        left: 0%;
+        width: 100%;
+        height: 80%;
+        background: green;
+        transform: rotate(-3deg);
+      }
+    }
+
+    &__step2 {
+      position: absolute;
+      bottom: 7%;
+      left: 6.5%;
+      width: calc(95 * var(--unit));
+      height: calc(19 * var(--unit));
+      background: red;
+      transform: rotate(25deg);
+      overflow: hidden;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: -45%;
+        left: 0%;
+        width: 100%;
+        height: 60%;
+        background: green;
+        transform: rotate(-5deg);
+      }
+    }
+
+    &__bottom {
+      position: absolute;
+      bottom: 0%;
+      left: 25%;
+      width: calc(120 * var(--unit));
+      height: calc(20 * var(--unit));
+      background: red;
+    }
+
+    &__bottom-box {
+      position: absolute;
+      bottom: 0%;
+      left: 28%;
+      width: calc(120 * var(--unit));
+      height: calc(70 * var(--unit));
+      background: red;
+      //   border: 1px solid #000;
+      overflow: hidden;
+
+      &__inner {
+        // opacity: 0.5;
+        position: absolute;
+        bottom: 49%;
+        left: -19%;
+        width: calc(150 * var(--unit));
+        height: calc(70 * var(--unit));
+        background: green;
+        border-radius: 50%;
+        transform: rotate(-32deg);
+      }
+    }
+
+    &__circle {
+      position: absolute;
+      bottom: 0%;
+      left: 47%;
+      width: calc(90 * var(--unit));
+      height: calc(80 * var(--unit));
+      border-radius: 50%;
+      background: red;
+      transform: rotate(-25deg);
+    }
+
+    &__back {
+      position: absolute;
+      top: 15%;
+      left: 65%;
+      width: calc(40 * var(--unit));
+      height: calc(180 * var(--unit));
+      background: red;
+      transform: rotate(25deg);
+    }
+
+    &__back-bottom {
+      position: absolute;
+      top: 65%;
+      left: 63%;
+      width: calc(50 * var(--unit));
+      height: calc(60 * var(--unit));
+      background: red;
+      transform: rotate(-25deg);
+    }
+
+    &__s-side-part {
+      position: absolute;
+      bottom: 0%;
+      left: 47%;
+      width: calc(80 * var(--unit));
+      height: calc(40 * var(--unit));
+      background: orange;
+      border-radius: 80% 30% 30% 10%/ 85% 50% 50% 10%;
+
+      &__screw {
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-80%, -50%);
+        width: calc(30 * var(--unit));
+        height: calc(30 * var(--unit));
+        border-radius: 50%;
+        background: blue;
+      }
+    }
+
+    &__b-side-part {
+      position: absolute;
+      bottom: 3%;
+      left: 61%;
+      width: calc(80 * var(--unit));
+      height: calc(50 * var(--unit));
+      background: lawngreen;
+      border-radius: 100% 65% 56% 60% / 100% 67% 81% 60%;
+      transform: rotate(-10deg);
+
+      &__screw {
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-80%, -50%);
+        width: calc(40 * var(--unit));
+        height: calc(40 * var(--unit));
+        border-radius: 50%;
+        background: blue;
+      }
+    }
+  }
+
+  .front-fender {
+    position: absolute;
+    top: 31%;
+    left: 17.5%;
+    width: calc(205 * var(--unit));
+    height: calc(50 * var(--unit));
+    transform: rotate(-20deg);
+    // border: 1px solid #000;
+    overflow: hidden;
+
+    &__inner {
+      position: absolute;
+      bottom: -10%;
+      left: -2%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(
+        farthest-corner at calc(150 * var(--unit)) calc(-120 * var(--unit)),
+        transparent 65%,
+        #43e 65%
+      );
+      transform: rotate(3deg);
+    }
+  }
+
+  .front-fork {
+    position: absolute;
+    top: 39%;
+    left: 20%;
+    width: calc(205 * var(--unit));
+    height: calc(90 * var(--unit));
+    background: orange;
+    transform: rotate(-20deg);
+    clip-path: polygon(
+      -8.76% -16px,
+      95.69% -48.99%,
+      115.74% 34.85%,
+      -17px 106.76%
+    );
+  }
+
+  .fron-shield {
+  }
+}

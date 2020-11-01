@@ -1,0 +1,370 @@
+:root {
+  --size: 50;
+  --unit: calc((var(--size) / 500) * 1vmin);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.Centering, .akira-container, .akira-container .front-tire__wheel, .akira-container .back-tire__wheel, .akira-container .back-tire__wheel__center {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.akira-container {
+  position: fixed;
+  width: calc(900 * var(--unit));
+  height: calc(500 * var(--unit));
+  border: 1px solid #000;
+}
+
+.akira-container .front-tire {
+  position: absolute;
+  bottom: calc(120 * var(--unit));
+  left: calc(60 * var(--unit));
+  width: calc(180 * var(--unit));
+  height: calc(180 * var(--unit));
+  border-radius: 50%;
+  background: #000;
+}
+
+.akira-container .front-tire__wheel {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background: red;
+}
+
+.akira-container .back-tire {
+  position: absolute;
+  bottom: calc(120 * var(--unit));
+  right: calc(40 * var(--unit));
+  width: calc(200 * var(--unit));
+  height: calc(200 * var(--unit));
+  border-radius: 50%;
+  background: #000;
+}
+
+.akira-container .back-tire__wheel {
+  position: absolute;
+  width: 65%;
+  height: 65%;
+  border-radius: 50%;
+  background: red;
+}
+
+.akira-container .back-tire__wheel__center {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  background: orange;
+}
+
+.akira-container .back-tire__b-screw {
+  position: absolute;
+  top: 30%;
+  left: 65%;
+  width: calc(30 * var(--unit));
+  height: calc(30 * var(--unit));
+  border-radius: 50%;
+  background: blue;
+  border: 2px solid grey;
+}
+
+.akira-container .back-tire__s-screw {
+  position: absolute;
+  top: 70%;
+  left: 45%;
+  width: calc(20 * var(--unit));
+  height: calc(20 * var(--unit));
+  border-radius: 50%;
+  background: blue;
+  border: 2px solid grey;
+}
+
+.akira-container .back-tire-arm {
+  position: absolute;
+  top: calc(175 * var(--unit));
+  right: calc(175 * var(--unit));
+  width: calc(100 * var(--unit));
+  height: calc(130 * var(--unit));
+  -webkit-transform: rotate(-65deg);
+          transform: rotate(-65deg);
+}
+
+.akira-container .back-tire-arm__first {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: calc(80 * var(--unit));
+  height: calc(60 * var(--unit));
+  background: lightblue;
+}
+
+.akira-container .back-tire-arm__second {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
+  margin-bottom: 1rem;
+  width: calc(80 * var(--unit));
+  height: calc(50 * var(--unit));
+  background: pink;
+}
+
+.akira-container .back-tire-arm__third {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  margin-bottom: 1rem;
+  width: calc(100 * var(--unit));
+  height: calc(70 * var(--unit));
+  background: orange;
+}
+
+.akira-container .body-tank {
+  position: absolute;
+  top: 43%;
+  left: 30%;
+  width: calc(230 * var(--unit));
+  height: calc(130 * var(--unit));
+  background: green;
+  border-radius: 30% 0% 100% 70% / 30% 0% 100% 70%;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+.akira-container .body-tank__screw {
+  position: absolute;
+  top: -16%;
+  left: 40%;
+  width: calc(45 * var(--unit));
+  height: calc(45 * var(--unit));
+  border: 5px solid green;
+  border-radius: 50%;
+  background: red;
+}
+
+.akira-container .body-seat {
+  position: absolute;
+  top: calc(100 * var(--unit));
+  left: calc(270 * var(--unit));
+  width: calc(470 * var(--unit));
+  height: calc(260 * var(--unit));
+  border: 1px solid #000;
+}
+
+.akira-container .body-seat__step1 {
+  position: absolute;
+  bottom: 25%;
+  left: -3%;
+  width: calc(70 * var(--unit));
+  height: calc(20 * var(--unit));
+  background: red;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+  overflow: hidden;
+}
+
+.akira-container .body-seat__step1::before {
+  position: absolute;
+  content: "";
+  top: -25%;
+  left: 0%;
+  width: 100%;
+  height: 80%;
+  background: green;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.akira-container .body-seat__step2 {
+  position: absolute;
+  bottom: 7%;
+  left: 6.5%;
+  width: calc(95 * var(--unit));
+  height: calc(19 * var(--unit));
+  background: red;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+  overflow: hidden;
+}
+
+.akira-container .body-seat__step2::before {
+  position: absolute;
+  content: "";
+  top: -45%;
+  left: 0%;
+  width: 100%;
+  height: 60%;
+  background: green;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+.akira-container .body-seat__bottom {
+  position: absolute;
+  bottom: 0%;
+  left: 25%;
+  width: calc(120 * var(--unit));
+  height: calc(20 * var(--unit));
+  background: red;
+}
+
+.akira-container .body-seat__bottom-box {
+  position: absolute;
+  bottom: 0%;
+  left: 28%;
+  width: calc(120 * var(--unit));
+  height: calc(70 * var(--unit));
+  background: red;
+  overflow: hidden;
+}
+
+.akira-container .body-seat__bottom-box__inner {
+  position: absolute;
+  bottom: 49%;
+  left: -19%;
+  width: calc(150 * var(--unit));
+  height: calc(70 * var(--unit));
+  background: green;
+  border-radius: 50%;
+  -webkit-transform: rotate(-32deg);
+          transform: rotate(-32deg);
+}
+
+.akira-container .body-seat__circle {
+  position: absolute;
+  bottom: 0%;
+  left: 47%;
+  width: calc(90 * var(--unit));
+  height: calc(80 * var(--unit));
+  border-radius: 50%;
+  background: red;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+}
+
+.akira-container .body-seat__back {
+  position: absolute;
+  top: 15%;
+  left: 65%;
+  width: calc(40 * var(--unit));
+  height: calc(180 * var(--unit));
+  background: red;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+.akira-container .body-seat__back-bottom {
+  position: absolute;
+  top: 65%;
+  left: 63%;
+  width: calc(50 * var(--unit));
+  height: calc(60 * var(--unit));
+  background: red;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+}
+
+.akira-container .body-seat__s-side-part {
+  position: absolute;
+  bottom: 0%;
+  left: 47%;
+  width: calc(80 * var(--unit));
+  height: calc(40 * var(--unit));
+  background: orange;
+  border-radius: 80% 30% 30% 10%/ 85% 50% 50% 10%;
+}
+
+.akira-container .body-seat__s-side-part__screw {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  -webkit-transform: translate(-80%, -50%);
+          transform: translate(-80%, -50%);
+  width: calc(30 * var(--unit));
+  height: calc(30 * var(--unit));
+  border-radius: 50%;
+  background: blue;
+}
+
+.akira-container .body-seat__b-side-part {
+  position: absolute;
+  bottom: 3%;
+  left: 61%;
+  width: calc(80 * var(--unit));
+  height: calc(50 * var(--unit));
+  background: lawngreen;
+  border-radius: 100% 65% 56% 60% / 100% 67% 81% 60%;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.akira-container .body-seat__b-side-part__screw {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  -webkit-transform: translate(-80%, -50%);
+          transform: translate(-80%, -50%);
+  width: calc(40 * var(--unit));
+  height: calc(40 * var(--unit));
+  border-radius: 50%;
+  background: blue;
+}
+
+.akira-container .front-fender {
+  position: absolute;
+  top: 31%;
+  left: 17.5%;
+  width: calc(205 * var(--unit));
+  height: calc(50 * var(--unit));
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  overflow: hidden;
+}
+
+.akira-container .front-fender__inner {
+  position: absolute;
+  bottom: -10%;
+  left: -2%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(farthest-corner at calc(150 * var(--unit)) calc(-120 * var(--unit)), transparent 65%, #43e 65%);
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+}
+
+.akira-container .front-fork {
+  position: absolute;
+  top: 39%;
+  left: 20%;
+  width: calc(205 * var(--unit));
+  height: calc(90 * var(--unit));
+  background: orange;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  -webkit-clip-path: polygon(-8.76% -16px, 95.69% -48.99%, 115.74% 34.85%, -17px 106.76%);
+          clip-path: polygon(-8.76% -16px, 95.69% -48.99%, 115.74% 34.85%, -17px 106.76%);
+}
+/*# sourceMappingURL=style.css.map */
