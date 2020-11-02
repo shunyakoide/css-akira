@@ -1,6 +1,25 @@
 // COLORS //
 $bg: #fff;
 
+$red1: #fa7e61;
+$red2: #ea6c57;
+$red3: #ea3c13;
+$red4: #8f2814;
+$red5: #782322;
+
+$tire1: #e0e5e9;
+$tire2: #484b50;
+$tire3: #3d3f3e;
+
+$seat1: #f17d55;
+$seat2: #c15027;
+$seat3: #7d3709;
+$seat4: #3b2710;
+
+$deck1: #7f6261;
+$deck2: #53372b;
+$deck3: #20150d;
+
 //Root
 
 :root {
@@ -42,7 +61,18 @@ body {
     width: calc(180 * var(--unit));
     height: calc(180 * var(--unit));
     border-radius: 50%;
-    background: #000;
+    background: darken($tire3, 10%);
+    box-shadow: 1px 1px 10px -2px $tire1 inset,
+      -5px -5px 10px darken($tire3, 80%) inset;
+
+    &__rim {
+      position: absolute;
+      @extend .Centering;
+      width: 75%;
+      height: 75%;
+      border-radius: 50%;
+      background: white;
+    }
 
     &__wheel {
       position: absolute;
@@ -50,7 +80,51 @@ body {
       width: 70%;
       height: 70%;
       border-radius: 50%;
-      background: red;
+      // background: red;
+      background: radial-gradient(
+        circle at 10px 10px,
+        $red2,
+        $red3,
+        $red4,
+        $red5
+      );
+      box-shadow: -5px -5px 15px darken($red5, 15%) inset;
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: radial-gradient(
+          circle at 50% 120%,
+          rgba(255, 255, 255, 0.2),
+          rgba(255, 255, 255, 0) 70%
+        );
+        border-radius: 50%;
+        bottom: 2.5%;
+        left: 5%;
+        opacity: 0.8;
+        height: 100%;
+        width: 90%;
+        filter: blur(5px);
+        z-index: 2;
+      }
+      &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 50% 50%,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0.6) 14%,
+          rgba(255, 255, 255, 0) 24%
+        );
+        transform: translateX(calc(-40 * var(--unit)))
+          translateY(calc(-40 * var(--unit))) skewX(-20deg);
+        filter: blur(7px);
+      }
     }
   }
 
@@ -61,7 +135,9 @@ body {
     width: calc(200 * var(--unit));
     height: calc(200 * var(--unit));
     border-radius: 50%;
-    background: #000;
+    background: darken($tire3, 10%);
+    box-shadow: 2px 2px 10px darken($tire1, 30%) inset,
+      -5px -5px 10px darken($tire3, 30%) inset;
 
     &__wheel {
       position: absolute;
@@ -69,7 +145,14 @@ body {
       width: 65%;
       height: 65%;
       border-radius: 50%;
-      background: red;
+      background: radial-gradient(
+        circle at 10px 10px,
+        $red1,
+        $red2,
+        $red3,
+        $red4,
+        $red5
+      );
 
       &__center {
         position: absolute;
@@ -77,7 +160,7 @@ body {
         width: 75%;
         height: 75%;
         border-radius: 50%;
-        background: orange;
+        background: linear-gradient(-200deg, $red2, $red3, $red4);
       }
     }
 
@@ -201,6 +284,18 @@ body {
       height: calc(40 * var(--unit));
       background: green;
       transform: rotate(-20deg);
+      border-radius: 20% 0 0 0;
+
+      &__kubomi {
+        position: absolute;
+        top: 0%;
+        left: 10%;
+        width: calc(33 * var(--unit));
+        height: calc(20 * var(--unit));
+        background: orange;
+        border-radius: 40% 40% 30% 30%;
+        // transform: rotate(-20deg);
+      }
     }
 
     &__back {
@@ -370,6 +465,7 @@ body {
         background: red;
         border-radius: 0% 100% 0% 0% / 0% 100% 0% 0%;
         transform: rotate(-35deg);
+        overflow: hidden;
 
         &::before {
           content: "";
@@ -380,6 +476,29 @@ body {
           height: calc(40 * var(--unit));
           background: red;
           transform: rotate(35deg);
+        }
+
+        &__light {
+          position: absolute;
+          top: -5%;
+          left: 30%;
+          width: calc(40 * var(--unit));
+          height: calc(25 * var(--unit));
+          background: orange;
+          border-radius: 50%;
+          transform: rotate(15deg);
+          overflow: hidden;
+
+          &__inner {
+            position: absolute;
+            top: 50%;
+            left: -10%;
+            width: calc(30 * var(--unit));
+            height: calc(20 * var(--unit));
+            background: green;
+            border-radius: 50%;
+            // transform: rotate(15deg);
+          }
         }
       }
     }
@@ -454,12 +573,17 @@ body {
       left: -2%;
       width: 200%;
       height: 200%;
+      transform: rotate(3deg);
+      border-radius: 75% 0 0 0;
       background: radial-gradient(
         farthest-corner at calc(150 * var(--unit)) calc(-120 * var(--unit)),
         transparent 65%,
-        #43e 65%
+        $red1 66%,
+        $red3 65%,
+        $red4 75%,
+        $red5 85% 100%
       );
-      transform: rotate(3deg);
+      box-shadow: 5px 0px 3px 0px $red1 inset;
     }
   }
 
@@ -469,7 +593,6 @@ body {
     left: 20%;
     width: calc(225 * var(--unit));
     height: calc(90 * var(--unit));
-    background: orange;
     transform: rotate(-20deg);
     clip-path: polygon(
       -8.76% -16px,
@@ -477,6 +600,9 @@ body {
       115.74% 34.85%,
       -17px 106.76%
     );
+    border-radius: 3px 3px 0 5px;
+    background: linear-gradient(170deg, $red3, $red4 50% 80%, $red5 95% 100%);
+    box-shadow: 1px 2px 5px 0px $red2 inset;
   }
 
   .front-deck1 {
@@ -485,21 +611,26 @@ body {
     left: 20%;
     width: calc(80 * var(--unit));
     height: calc(30 * var(--unit));
-    background: orange;
+    background: $deck2;
     border-radius: 5px 0 0 0;
     transform-origin: center;
     transform: skew(-50deg);
+    border-radius: 3px 3px 0 5px;
+    background: linear-gradient(170deg, $deck2, $deck3);
+    box-shadow: 4px 2px 3px 0px lighten($deck1, 30%) inset;
   }
 
   .front-deck2 {
     position: absolute;
-    top: 31%;
-    left: 26%;
-    width: calc(100 * var(--unit));
-    height: calc(36 * var(--unit));
-    background: green;
+    top: 32%;
+    left: 24%;
+    width: calc(140 * var(--unit));
+    height: calc(38 * var(--unit));
+    background: $deck2;
     border-radius: 100% 0% 0% 0% / 100% 0% 0% 0%;
     transform-origin: center;
+    background: linear-gradient(170deg, $deck2, $deck3);
+    box-shadow: 2px 2px 3px 0px lighten($deck1, 10%) inset;
   }
 
   .front-deck3 {
@@ -508,10 +639,12 @@ body {
     left: 36%;
     width: calc(60 * var(--unit));
     height: calc(50 * var(--unit));
-    background: red;
+    background: $deck2;
     border-radius: 5px 5px 0 0;
     transform-origin: center;
     transform: skew(-45deg);
+    background: linear-gradient(170deg, $deck2, $deck3);
+    box-shadow: 2px 2px 2px 0px lighten($deck1, 20%) inset;
 
     &__display {
       position: absolute;
@@ -519,22 +652,26 @@ body {
       left: 20%;
       width: calc(75 * var(--unit));
       height: calc(35 * var(--unit));
-      background: blue;
+      background: darken($deck2, 10%);
       border-radius: 100% 5px 3px 0;
       transform-origin: center;
       transform: skew(-125deg);
+      // background: linear-gradient(170deg, $deck2, $deck3);
+      box-shadow: 3px 2px 2px 0px darken($deck3, 100%) inset;
     }
 
     &__handle {
       position: absolute;
-      top: 30%;
-      left: 100%;
-      width: calc(20 * var(--unit));
-      height: calc(20 * var(--unit));
-      background: lightblue;
+      top: 40%;
+      left: 115%;
+      width: calc(15 * var(--unit));
+      height: calc(15 * var(--unit));
+      background: $deck2;
       border-radius: 50%;
       transform-origin: center;
       transform: skew(45deg);
+      background: linear-gradient(170deg, $red3, $red4);
+      box-shadow: 1px 1px 1px 0px $red1 inset, -1px -1px 2px 0px $red5 inset;
 
       &::before {
         content: "";
@@ -543,40 +680,43 @@ body {
         width: 50%;
         height: 50%;
         border-radius: 50%;
-        background: green;
+        background: darken($deck3, 90%);
+        box-shadow: -1px -1px 1px 0px $deck1 inset;
       }
     }
   }
 
   .front-shield {
-    opacity: 0.5;
+    opacity: 0.1;
     position: absolute;
     top: 20%;
     left: 16.5%;
     width: calc(280 * var(--unit));
     height: calc(82 * var(--unit));
     background: radial-gradient(
-      circle farthest-side at 98% 100%,
+      circle farthest-side at 98% 110%,
       transparent 20%,
-      orange 20%
+      lightblue 20%
     );
     transform: rotate(-20deg);
     border-radius: 88% 0% 100% 18% / 100% 0% 0% 0%;
+    box-shadow: 3px 4px 3px 0px darken(lightblue, 30%) inset;
   }
 
   .front-shield-back {
-    opacity: 0;
+    opacity: 0.2;
     position: absolute;
-    top: 25%;
-    left: 18%;
-    width: calc(230 * var(--unit));
-    height: calc(80 * var(--unit));
+    top: 20%;
+    left: 16.5%;
+    width: calc(280 * var(--unit));
+    height: calc(82 * var(--unit));
     background: radial-gradient(
-      circle farthest-side at 120% 120%,
-      transparent 32%,
-      blue 32%
+      circle farthest-side at 98% 130%,
+      transparent 20%,
+      lightblue 20%
     );
     transform: rotate(-20deg);
     border-radius: 88% 0% 100% 18% / 100% 0% 0% 0%;
+    z-index: -1;
   }
 }
