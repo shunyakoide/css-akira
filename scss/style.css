@@ -17,7 +17,7 @@ body {
   overflow: hidden;
 }
 
-.Centering, .akira-container, .akira-container .front-tire__rim, .akira-container .front-tire__wheel, .akira-container .back-tire__wheel, .akira-container .back-tire__wheel__center, .akira-container .body-tank__screw__inner, .akira-container .body-tank__screw__inner__line, .akira-container .front-deck3__handle::before {
+.Centering, .akira-container, .akira-container .front-tire__rim, .akira-container .front-tire__wheel, .akira-container .back-tire__wheel, .akira-container .back-tire__wheel__center, .akira-container .back-tire__b-screw__inner, .akira-container .back-tire__s-screw__inner, .akira-container .body-tank__screw__inner, .akira-container .body-tank__screw__inner__line, .akira-container .front-deck3__handle::before {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -29,6 +29,20 @@ body {
   width: calc(900 * var(--unit));
   height: calc(500 * var(--unit));
   border: 1px solid #000;
+}
+
+.akira-container .big-shadow {
+  width: 85%;
+  height: 14%;
+  background: radial-gradient(rgba(32, 21, 14, 0.8) 30%, transparent);
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+  position: absolute;
+  top: 79%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -79%);
+          transform: translate(-50%, -79%);
+  border-radius: 50%;
 }
 
 .akira-container .front-tire {
@@ -122,23 +136,39 @@ body {
 .akira-container .back-tire__b-screw {
   position: absolute;
   top: 30%;
-  left: 65%;
-  width: calc(30 * var(--unit));
-  height: calc(30 * var(--unit));
+  left: 63%;
+  width: calc(32 * var(--unit));
+  height: calc(32 * var(--unit));
   border-radius: 50%;
-  background: blue;
-  border: 2px solid grey;
+  background: #8f2814;
+  background: radial-gradient(circle at 10px 10px, #fa7e61, #ea6c57, #ea3c13, #8f2814, #782322);
+}
+
+.akira-container .back-tire__b-screw__inner {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background: #ea3c13;
 }
 
 .akira-container .back-tire__s-screw {
   position: absolute;
   top: 70%;
   left: 45%;
-  width: calc(20 * var(--unit));
-  height: calc(20 * var(--unit));
+  width: calc(22 * var(--unit));
+  height: calc(22 * var(--unit));
   border-radius: 50%;
-  background: blue;
-  border: 2px solid grey;
+  background: #8f2814;
+  background: radial-gradient(circle at 5px 5px, #fa7e61, #ea6c57, #ea3c13, #8f2814, #782322);
+}
+
+.akira-container .back-tire__s-screw__inner {
+  position: absolute;
+  width: 79%;
+  height: 79%;
+  border-radius: 50%;
+  background: #ea3c13;
 }
 
 .akira-container .back-tire-arm {
@@ -161,6 +191,8 @@ body {
   width: calc(70 * var(--unit));
   height: calc(60 * var(--unit));
   background: #8f2814;
+  background: -webkit-gradient(linear, right top, left top, color-stop(20%, #ea6c57), color-stop(22%, #ea3c13), color-stop(78%, #ea3c13), color-stop(80%, #8f2814));
+  background: linear-gradient(-90deg, #ea6c57 20%, #ea3c13 22%, #ea3c13 78%, #8f2814 80%);
 }
 
 .akira-container .back-tire-arm__second {
@@ -173,6 +205,10 @@ body {
   width: calc(70 * var(--unit));
   height: calc(50 * var(--unit));
   background: #782322;
+  background: -webkit-gradient(linear, right top, left top, color-stop(20%, #ea6c57), color-stop(22%, #ea3c13), color-stop(78%, #ea3c13), color-stop(80%, #8f2814));
+  background: linear-gradient(-90deg, #ea6c57 20%, #ea3c13 22%, #ea3c13 78%, #8f2814 80%);
+  -webkit-box-shadow: 0px 4px 3px #782322;
+          box-shadow: 0px 4px 3px #782322;
 }
 
 .akira-container .back-tire-arm__third {
@@ -183,26 +219,35 @@ body {
           transform: translate(-50%, 0%);
   margin-bottom: 1rem;
   width: calc(70 * var(--unit));
-  height: calc(70 * var(--unit));
+  height: calc(48 * var(--unit));
   background: #8f2814;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(79%, #ea3c13), color-stop(85%, #d23611));
+  background: linear-gradient(0deg, #ea3c13 79%, #d23611 85%);
+  -webkit-box-shadow: 0px 2px 3px #782322;
+          box-shadow: 0px 2px 3px #782322;
 }
 
 .akira-container .back-tire-arm__third::before, .akira-container .back-tire-arm__third::after {
   content: "";
   position: absolute;
-  top: 8%;
+  top: 12%;
   left: 0%;
   -webkit-transform: translate(-50%, 0%) rotate(45deg);
           transform: translate(-50%, 0%) rotate(45deg);
   margin-bottom: 1rem;
-  width: calc(37 * var(--unit));
-  height: calc(37 * var(--unit));
+  width: calc(36 * var(--unit));
+  height: calc(36 * var(--unit));
   background: #8f2814;
-  border-radius: 5px;
+  border-radius: 2px;
+}
+
+.akira-container .back-tire-arm__third::before {
+  background: linear-gradient(-135deg, transparent 47%, #dc3812 48%);
 }
 
 .akira-container .back-tire-arm__third::after {
   left: 100%;
+  background: linear-gradient(45deg, transparent 47%, #ea6c57 48%);
 }
 
 .akira-container .middle-display1 {
@@ -297,7 +342,7 @@ body {
   top: 46%;
   left: 33%;
   width: calc(210 * var(--unit));
-  height: calc(120 * var(--unit));
+  height: calc(121 * var(--unit));
   background: #782322;
   border-radius: 0% 0% 70% 20% / 0% 0% 70% 20%;
   -webkit-transform: rotate(35deg);
@@ -360,6 +405,8 @@ body {
           transform: rotate(60deg);
   overflow: hidden;
   background: linear-gradient(-3deg, #ea3c13 50%, transparent 50%);
+  -webkit-box-shadow: 0px -2px 5px 0px #782322 inset;
+          box-shadow: 0px -2px 5px 0px #782322 inset;
 }
 
 .akira-container .body-seat__step2 {
@@ -372,6 +419,8 @@ body {
           transform: rotate(25deg);
   overflow: hidden;
   background: linear-gradient(-5deg, #ea3c13 80%, transparent 80%);
+  -webkit-box-shadow: -1px -4px 4px -2px #782322 inset;
+          box-shadow: -1px -4px 4px -2px #782322 inset;
 }
 
 .akira-container .body-seat__bottom {
@@ -391,6 +440,8 @@ body {
   height: calc(70 * var(--unit));
   background: #ea3c13;
   overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #ea3c13), color-stop(98%, #8f2814));
+  background: linear-gradient(#ea3c13 90%, #8f2814 98%);
 }
 
 .akira-container .body-seat__bottom-box__inner {

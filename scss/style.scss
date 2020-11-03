@@ -54,6 +54,18 @@ body {
   height: calc(500 * var(--unit));
   border: 1px solid #000;
 
+  .big-shadow {
+    width: 85%;
+    height: 14%;
+    background: radial-gradient(rgba(32, 21, 14, 0.8) 30%, transparent);
+    filter: blur(8px);
+    position: absolute;
+    top: 79%;
+    left: 50%;
+    transform: translate(-50%, -79%);
+    border-radius: 50%;
+  }
+
   .front-tire {
     position: absolute;
     bottom: calc(120 * var(--unit));
@@ -167,23 +179,55 @@ body {
     &__b-screw {
       position: absolute;
       top: 30%;
-      left: 65%;
-      width: calc(30 * var(--unit));
-      height: calc(30 * var(--unit));
+      left: 63%;
+      width: calc(32 * var(--unit));
+      height: calc(32 * var(--unit));
       border-radius: 50%;
-      background: blue;
-      border: 2px solid grey;
+      background: $red4;
+      background: radial-gradient(
+        circle at 10px 10px,
+        $red1,
+        $red2,
+        $red3,
+        $red4,
+        $red5
+      );
+
+      &__inner {
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        @extend .Centering;
+        border-radius: 50%;
+        background: $red3;
+      }
     }
 
     &__s-screw {
       position: absolute;
       top: 70%;
       left: 45%;
-      width: calc(20 * var(--unit));
-      height: calc(20 * var(--unit));
+      width: calc(22 * var(--unit));
+      height: calc(22 * var(--unit));
       border-radius: 50%;
-      background: blue;
-      border: 2px solid grey;
+      background: $red4;
+      background: radial-gradient(
+        circle at 5px 5px,
+        $red1,
+        $red2,
+        $red3,
+        $red4,
+        $red5
+      );
+
+      &__inner {
+        position: absolute;
+        width: 79%;
+        height: 79%;
+        @extend .Centering;
+        border-radius: 50%;
+        background: $red3;
+      }
     }
   }
 
@@ -193,7 +237,6 @@ body {
     right: calc(178 * var(--unit));
     width: calc(100 * var(--unit));
     height: calc(130 * var(--unit));
-    // background: green;
     transform: rotate(-65deg);
     z-index: 10;
 
@@ -205,6 +248,13 @@ body {
       width: calc(70 * var(--unit));
       height: calc(60 * var(--unit));
       background: $red4;
+      background: linear-gradient(
+        -90deg,
+        $red2 20%,
+        $red3 22%,
+        $red3 78%,
+        $red4 80%
+      );
     }
 
     &__second {
@@ -216,6 +266,14 @@ body {
       width: calc(70 * var(--unit));
       height: calc(50 * var(--unit));
       background: $red5;
+      background: linear-gradient(
+        -90deg,
+        $red2 20%,
+        $red3 22%,
+        $red3 78%,
+        $red4 80%
+      );
+      box-shadow: 0px 4px 3px $red5;
     }
 
     &__third {
@@ -225,25 +283,36 @@ body {
       transform: translate(-50%, 0%);
       margin-bottom: 1rem;
       width: calc(70 * var(--unit));
-      height: calc(70 * var(--unit));
+      height: calc(48 * var(--unit));
       background: $red4;
+      background: linear-gradient(0deg, $red3 79%, darken($red3, 5%) 85%);
+      box-shadow: 0px 2px 3px $red5;
 
       &::before,
       &::after {
         content: "";
         position: absolute;
-        top: 8%;
+        top: 12%;
         left: 0%;
         transform: translate(-50%, 0%) rotate(45deg);
         margin-bottom: 1rem;
-        width: calc(37 * var(--unit));
-        height: calc(37 * var(--unit));
+        width: calc(36 * var(--unit));
+        height: calc(36 * var(--unit));
         background: $red4;
-        border-radius: 5px;
+        border-radius: 2px;
+      }
+
+      &::before {
+        background: linear-gradient(
+          -135deg,
+          transparent 47%,
+          darken($red3, 3%) 48%
+        );
       }
 
       &::after {
         left: 100%;
+        background: linear-gradient(45deg, transparent 47%, $red2 48%);
       }
     }
   }
@@ -336,7 +405,7 @@ body {
     top: 46%;
     left: 33%;
     width: calc(210 * var(--unit));
-    height: calc(120 * var(--unit));
+    height: calc(121 * var(--unit));
     background: $red5;
     border-radius: 0% 0% 70% 20% / 0% 0% 70% 20%;
     transform: rotate(35deg);
@@ -396,6 +465,7 @@ body {
       transform: rotate(60deg);
       overflow: hidden;
       background: linear-gradient(-3deg, $red3 50%, transparent 50%);
+      box-shadow: 0px -2px 5px 0px $red5 inset;
     }
 
     &__step2 {
@@ -407,6 +477,7 @@ body {
       transform: rotate(25deg);
       overflow: hidden;
       background: linear-gradient(-5deg, $red3 80%, transparent 80%);
+      box-shadow: -1px -4px 4px -2px $red5 inset;
     }
 
     &__bottom {
@@ -426,6 +497,8 @@ body {
       height: calc(70 * var(--unit));
       background: $red3;
       overflow: hidden;
+      background: linear-gradient($red3 90%, $red4 98%);
+      // box-shadow: 0px -4px 10px -2px $red5 inset;
 
       &__inner {
         position: absolute;
