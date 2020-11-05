@@ -104,7 +104,8 @@ body {
       width: 65%;
       height: 65%;
       border-radius: 50%;
-      // background: red;
+      overflow: hidden;
+      background: $red3;
       background: radial-gradient(
         circle at 10px 10px,
         $red2,
@@ -148,6 +149,33 @@ body {
         transform: translateX(calc(-40 * var(--unit)))
           translateY(calc(-40 * var(--unit))) skewX(-20deg);
         filter: blur(7px);
+      }
+
+      .shoei {
+        position: absolute;
+        top: 70%;
+        left: 20%;
+        background: #fff;
+        border-top: (calc(3 * var(--unit))) solid purple;
+        border-bottom: (calc(3 * var(--unit))) solid purple;
+        font-family: "Titillium Web", sans-serif;
+        line-height: 1.2;
+        padding: 0 (calc(3 * var(--unit)));
+        letter-spacing: (calc(1 * var(--unit)));
+        color: purple;
+        font-size: (calc(17 * var(--unit)));
+        transform: rotate(-10deg);
+
+        // &::before,
+        // &::after {
+        //   content: "";
+        //   position: absolute;
+        //   transform: rotate(45deg);
+        //   width: (calc(15 * var(--unit)));
+        //   height: (calc(15 * var(--unit)));
+        //   background: #fff;
+        //   border-radius: (calc(1 * var(--unit)));
+        // }
       }
     }
   }
@@ -694,6 +722,45 @@ body {
         $red5 85% 100%
       );
       box-shadow: 5px 0px 3px 0px $red1 inset;
+
+      &__logo {
+        position: absolute;
+        bottom: 8%;
+        left: 4%;
+        width: calc(45 * var(--unit));
+        height: calc(18 * var(--unit));
+        border: 1px solid #000;
+        transform: rotate(20deg);
+        &__box {
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            #fff 0% 25%,
+            $red3 25% 65%,
+            #fff 65% 100%
+          );
+          border: 1px solid blue;
+        }
+
+        &__circle {
+          position: absolute;
+          @extend .Centering;
+          width: calc(25 * var(--unit));
+          height: calc(25 * var(--unit));
+          background: blue;
+          border-radius: 50%;
+
+          &::before {
+            content: "★";
+            position: absolute;
+            @extend .Centering;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            margin-left: calc(2 * var(--unit));
+          }
+        }
+      }
     }
   }
 
