@@ -22,6 +22,11 @@ $deck3: #20150d;
 
 $canonWhite: #fff;
 
+$stickerYellow: #eccd62;
+$stickerBlue: #686ba9;
+$stickerGreen: #5d9673;
+$stickerBlack: #230204;
+
 //Root
 
 :root {
@@ -151,18 +156,85 @@ body {
         filter: blur(7px);
       }
 
+      .naritasan {
+        position: absolute;
+        top: 38%;
+        left: 10%;
+        color: $stickerBlue;
+        font-size: (calc(11 * var(--unit)));
+        line-height: 1;
+        writing-mode: vertical-lr;
+        transform: scaleY(0.7) skew(-2deg) rotate(-5deg);
+
+        &::before {
+          content: "";
+          position: absolute;
+          @extend .Centering;
+          width: 0;
+          height: 0;
+          padding: (calc(22 * var(--unit))) (calc(10 * var(--unit)));
+          border-radius: 50%;
+          background: $stickerYellow;
+          border: (calc(3 * var(--unit))) solid $stickerBlue;
+          z-index: -1;
+        }
+      }
+
+      .triangle-base {
+        position: absolute;
+        top: 15%;
+        left: 31%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: (calc(41.5 * var(--unit))) (calc(23 * var(--unit))) 0
+          (calc(23 * var(--unit)));
+        border-color: $stickerYellow transparent transparent transparent;
+      }
+
+      .triangle {
+        position: absolute;
+        top: 17%;
+        left: 34%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: (calc(19 * var(--unit))) (calc(9.8 * var(--unit))) 0
+          (calc(9.8 * var(--unit)));
+        border-color: $stickerBlack transparent transparent transparent;
+
+        &:nth-child(3) {
+          left: 52%;
+        }
+
+        &:nth-child(2n) {
+          left: 43%;
+          top: 32%;
+        }
+      }
+
+      .triangle-circle {
+        position: absolute;
+        top: 22%;
+        left: 45%;
+        width: (calc(11.5 * var(--unit)));
+        height: (calc(11.5 * var(--unit)));
+        background: $red3;
+        border-radius: 50%;
+      }
+
       .shoei {
         position: absolute;
         top: 70%;
         left: 20%;
         background: #fff;
-        border-top: (calc(3 * var(--unit))) solid purple;
-        border-bottom: (calc(3 * var(--unit))) solid purple;
+        border-top: (calc(3 * var(--unit))) solid $stickerBlue;
+        border-bottom: (calc(3 * var(--unit))) solid $stickerBlue;
         font-family: "Titillium Web", sans-serif;
         line-height: 1.2;
         padding: 0 (calc(3 * var(--unit)));
         letter-spacing: (calc(1 * var(--unit)));
-        color: purple;
+        color: $stickerBlue;
         font-size: (calc(17 * var(--unit)));
         transform: rotate(-10deg);
 
@@ -729,7 +801,7 @@ body {
         left: 4%;
         width: calc(45 * var(--unit));
         height: calc(18 * var(--unit));
-        border: 1px solid #000;
+        // border: 1px solid #000;
         transform: rotate(20deg);
         &__box {
           width: 100%;
@@ -739,7 +811,7 @@ body {
             $red3 25% 65%,
             #fff 65% 100%
           );
-          border: 1px solid blue;
+          border: 1px solid $stickerBlue;
         }
 
         &__circle {
@@ -747,17 +819,17 @@ body {
           @extend .Centering;
           width: calc(25 * var(--unit));
           height: calc(25 * var(--unit));
-          background: blue;
+          background: $stickerBlue;
           border-radius: 50%;
 
-          &::before {
-            content: "★";
+          &__star {
             position: absolute;
             @extend .Centering;
             width: 100%;
             height: 100%;
+            font-size: calc(22 * var(--unit));
             color: #fff;
-            margin-left: calc(2 * var(--unit));
+            margin-left: calc(1.5 * var(--unit));
           }
         }
       }
@@ -803,7 +875,10 @@ body {
       top: 0%;
       left: 50%;
       height: calc(23 * var(--unit));
-      background: linear-gradient(lighten(#000, 35%) 10%, #000 20% 100%);
+      background: linear-gradient(
+        lighten($stickerBlack, 35%) 10%,
+        $stickerBlack 20% 100%
+      );
       color: #fff;
       font-size: calc(23 * var(--unit));
       font-family: citizen;
@@ -819,18 +894,22 @@ body {
       height: calc(35 * var(--unit));
       background: #fff;
       border-radius: 50%;
-      border: calc(2 * var(--unit)) solid #000;
+      border: calc(2 * var(--unit)) solid $stickerBlack;
       &__inner {
         position: absolute;
         @extend .Centering;
         width: 85%;
         height: 85%;
         border-radius: 50%;
-        border: calc(2 * var(--unit)) solid #000;
-        background-image: linear-gradient(135deg, green 25%, transparent 25%),
-          linear-gradient(225deg, green 25%, transparent 25%),
-          linear-gradient(45deg, green 25%, transparent 25%),
-          linear-gradient(315deg, green 25%, #fff 25%);
+        border: calc(2 * var(--unit)) solid $stickerBlack;
+        background-image: linear-gradient(
+            135deg,
+            $stickerGreen 25%,
+            transparent 25%
+          ),
+          linear-gradient(225deg, $stickerGreen 25%, transparent 25%),
+          linear-gradient(45deg, $stickerGreen 25%, transparent 25%),
+          linear-gradient(315deg, $stickerGreen 25%, #fff 25%);
         background-position: calc(1 * var(--unit)) calc(13 * var(--unit));
         background-size: calc(25 * var(--unit)) calc(25 * var(--unit));
         background-repeat: repeat;

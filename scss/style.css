@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --size: 50;
   --unit: calc((var(--size) / 500) * 1vmin);
@@ -28,7 +27,7 @@ body {
   overflow: hidden;
 }
 
-.Centering, .akira-container, .akira-container .front-tire__rim, .akira-container .front-tire__wheel, .akira-container .back-tire__wheel, .akira-container .back-tire__wheel__center, .akira-container .back-tire__b-screw__inner, .akira-container .back-tire__s-screw__inner, .akira-container .body-tank__screw__inner, .akira-container .body-tank__screw__inner__line, .akira-container .front-fender__inner__logo__circle, .akira-container .front-fender__inner__logo__circle::before, .akira-container .front-fork .bnw__inner, .akira-container .front-deck3__handle::before {
+.Centering, .akira-container, .akira-container .front-tire__rim, .akira-container .front-tire__wheel, .akira-container .front-tire__wheel .naritasan::before, .akira-container .back-tire__wheel, .akira-container .back-tire__wheel__center, .akira-container .back-tire__b-screw__inner, .akira-container .back-tire__s-screw__inner, .akira-container .body-tank__screw__inner, .akira-container .body-tank__screw__inner__line, .akira-container .front-fender__inner__logo__circle, .akira-container .front-fender__inner__logo__circle__star, .akira-container .front-fork .bnw__inner, .akira-container .front-deck3__handle::before {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -118,18 +117,85 @@ body {
           filter: blur(7px);
 }
 
+.akira-container .front-tire__wheel .naritasan {
+  position: absolute;
+  top: 38%;
+  left: 10%;
+  color: #686ba9;
+  font-size: calc(11 * var(--unit));
+  line-height: 1;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: scaleY(0.7) skew(-2deg) rotate(-5deg);
+          transform: scaleY(0.7) skew(-2deg) rotate(-5deg);
+}
+
+.akira-container .front-tire__wheel .naritasan::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: calc(22 * var(--unit)) calc(10 * var(--unit));
+  border-radius: 50%;
+  background: #eccd62;
+  border: calc(3 * var(--unit)) solid #686ba9;
+  z-index: -1;
+}
+
+.akira-container .front-tire__wheel .triangle-base {
+  position: absolute;
+  top: 15%;
+  left: 31%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: calc(41.5 * var(--unit)) calc(23 * var(--unit)) 0 calc(23 * var(--unit));
+  border-color: #eccd62 transparent transparent transparent;
+}
+
+.akira-container .front-tire__wheel .triangle {
+  position: absolute;
+  top: 17%;
+  left: 34%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: calc(19 * var(--unit)) calc(9.8 * var(--unit)) 0 calc(9.8 * var(--unit));
+  border-color: #230204 transparent transparent transparent;
+}
+
+.akira-container .front-tire__wheel .triangle:nth-child(3) {
+  left: 52%;
+}
+
+.akira-container .front-tire__wheel .triangle:nth-child(2n) {
+  left: 43%;
+  top: 32%;
+}
+
+.akira-container .front-tire__wheel .triangle-circle {
+  position: absolute;
+  top: 22%;
+  left: 45%;
+  width: calc(11.5 * var(--unit));
+  height: calc(11.5 * var(--unit));
+  background: #ea3c13;
+  border-radius: 50%;
+}
+
 .akira-container .front-tire__wheel .shoei {
   position: absolute;
   top: 70%;
   left: 20%;
   background: #fff;
-  border-top: calc(3 * var(--unit)) solid purple;
-  border-bottom: calc(3 * var(--unit)) solid purple;
+  border-top: calc(3 * var(--unit)) solid #686ba9;
+  border-bottom: calc(3 * var(--unit)) solid #686ba9;
   font-family: "Titillium Web", sans-serif;
   line-height: 1.2;
   padding: 0 calc(3 * var(--unit));
   letter-spacing: calc(1 * var(--unit));
-  color: purple;
+  color: #686ba9;
   font-size: calc(17 * var(--unit));
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
@@ -672,7 +738,6 @@ body {
   left: 4%;
   width: calc(45 * var(--unit));
   height: calc(18 * var(--unit));
-  border: 1px solid #000;
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
 }
@@ -682,24 +747,24 @@ body {
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(25%, #ea3c13), color-stop(65%, #fff));
   background: linear-gradient(#fff 0% 25%, #ea3c13 25% 65%, #fff 65% 100%);
-  border: 1px solid blue;
+  border: 1px solid #686ba9;
 }
 
 .akira-container .front-fender__inner__logo__circle {
   position: absolute;
   width: calc(25 * var(--unit));
   height: calc(25 * var(--unit));
-  background: blue;
+  background: #686ba9;
   border-radius: 50%;
 }
 
-.akira-container .front-fender__inner__logo__circle::before {
-  content: "★";
+.akira-container .front-fender__inner__logo__circle__star {
   position: absolute;
   width: 100%;
   height: 100%;
+  font-size: calc(22 * var(--unit));
   color: #fff;
-  margin-left: calc(2 * var(--unit));
+  margin-left: calc(1.5 * var(--unit));
 }
 
 .akira-container .front-fork {
@@ -742,8 +807,8 @@ body {
   top: 0%;
   left: 50%;
   height: calc(23 * var(--unit));
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #595959), color-stop(20%, #000));
-  background: linear-gradient(#595959 10%, #000 20% 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #cc0c17), color-stop(20%, #230204));
+  background: linear-gradient(#cc0c17 10%, #230204 20% 100%);
   color: #fff;
   font-size: calc(23 * var(--unit));
   font-family: citizen;
@@ -759,7 +824,7 @@ body {
   height: calc(35 * var(--unit));
   background: #fff;
   border-radius: 50%;
-  border: calc(2 * var(--unit)) solid #000;
+  border: calc(2 * var(--unit)) solid #230204;
 }
 
 .akira-container .front-fork .bnw__inner {
@@ -767,8 +832,8 @@ body {
   width: 85%;
   height: 85%;
   border-radius: 50%;
-  border: calc(2 * var(--unit)) solid #000;
-  background-image: linear-gradient(135deg, green 25%, transparent 25%), linear-gradient(225deg, green 25%, transparent 25%), linear-gradient(45deg, green 25%, transparent 25%), linear-gradient(315deg, green 25%, #fff 25%);
+  border: calc(2 * var(--unit)) solid #230204;
+  background-image: linear-gradient(135deg, #5d9673 25%, transparent 25%), linear-gradient(225deg, #5d9673 25%, transparent 25%), linear-gradient(45deg, #5d9673 25%, transparent 25%), linear-gradient(315deg, #5d9673 25%, #fff 25%);
   background-position: calc(1 * var(--unit)) calc(13 * var(--unit));
   background-size: calc(25 * var(--unit)) calc(25 * var(--unit));
   background-repeat: repeat;
