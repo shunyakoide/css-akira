@@ -80,7 +80,6 @@ body {
   width: 65%;
   height: 65%;
   border-radius: 50%;
-  overflow: hidden;
   background: #ea3c13;
   background: radial-gradient(circle at 10px 10px, #ea6c57, #ea3c13, #8f2814, #782322);
   -webkit-box-shadow: -5px -5px 15px #3c1211 inset;
@@ -90,7 +89,7 @@ body {
 .akira-container .front-tire__wheel:before {
   content: "";
   position: absolute;
-  background: radial-gradient(circle at 50% 120%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle at 50% 120%, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0) 70%);
   border-radius: 50%;
   bottom: 2.5%;
   left: 5%;
@@ -110,7 +109,7 @@ body {
   top: 5%;
   left: 10%;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6) 14%, rgba(255, 255, 255, 0) 24%);
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6) 14%, rgba(255, 255, 255, 0) 24%);
   -webkit-transform: translateX(calc(-40 * var(--unit))) translateY(calc(-40 * var(--unit))) skewX(-20deg);
           transform: translateX(calc(-40 * var(--unit))) translateY(calc(-40 * var(--unit))) skewX(-20deg);
   -webkit-filter: blur(7px);
@@ -122,13 +121,14 @@ body {
   top: 38%;
   left: 10%;
   color: #686ba9;
-  font-size: calc(11 * var(--unit));
+  font-size: calc(12 * var(--unit));
   line-height: 1;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
   -webkit-transform: scaleY(0.7) skew(-2deg) rotate(-5deg);
           transform: scaleY(0.7) skew(-2deg) rotate(-5deg);
+  font-family: "Kosugi Maru", sans-serif;
 }
 
 .akira-container .front-tire__wheel .naritasan::before {
@@ -161,7 +161,7 @@ body {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: calc(19 * var(--unit)) calc(9.8 * var(--unit)) 0 calc(9.8 * var(--unit));
+  border-width: calc(18.6 * var(--unit)) calc(9.3 * var(--unit)) 0 calc(9.3 * var(--unit));
   border-color: #230204 transparent transparent transparent;
 }
 
@@ -184,21 +184,86 @@ body {
   border-radius: 50%;
 }
 
-.akira-container .front-tire__wheel .shoei {
+.akira-container .front-tire__wheel .shoei__triangle__left {
   position: absolute;
-  top: 70%;
-  left: 20%;
+  bottom: 12%;
+  left: 27%;
+  -webkit-transform: rotate(33deg);
+          transform: rotate(33deg);
+  width: calc(18 * var(--unit));
+  height: calc(18 * var(--unit));
   background: #fff;
-  border-top: calc(3 * var(--unit)) solid #686ba9;
-  border-bottom: calc(3 * var(--unit)) solid #686ba9;
-  font-family: "Titillium Web", sans-serif;
-  line-height: 1.2;
-  padding: 0 calc(3 * var(--unit));
-  letter-spacing: calc(1 * var(--unit));
-  color: #686ba9;
-  font-size: calc(17 * var(--unit));
+  border: 2px solid #686ba9;
+}
+
+.akira-container .front-tire__wheel .shoei__triangle__right {
+  position: absolute;
+  bottom: 19%;
+  left: 62%;
+  -webkit-transform: rotate(33deg);
+          transform: rotate(33deg);
+  width: calc(18 * var(--unit));
+  height: calc(18 * var(--unit));
+  background: #fff;
+  border: 2px solid #686ba9;
+}
+
+.akira-container .front-tire__wheel .shoei__base {
+  position: absolute;
+  bottom: 10%;
+  left: -50%;
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
+  width: calc(220 * var(--unit));
+  height: calc(120 * var(--unit));
+  background: radial-gradient(transparent 0% 45%, #686ba9 45% 47%, #fff 50% 100%);
+  border: 2px solid #686ba9;
+  border-radius: 50%;
+  -webkit-clip-path: polygon(40.4% 64.13%, 62.92% 33.8%, 60.16% 103.46%, 41.65% 103.47%);
+          clip-path: polygon(40.4% 64.13%, 62.92% 33.8%, 60.16% 103.46%, 41.65% 103.47%);
+}
+
+.akira-container .front-tire__wheel .shoei__letter {
+  position: absolute;
+  font-weight: 900;
+  color: #686ba9;
+  font-size: calc(16 * var(--unit));
+  font-family: "Titillium Web", sans-serif;
+}
+
+.akira-container .front-tire__wheel .l1 {
+  top: 68%;
+  left: 33%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.akira-container .front-tire__wheel .l2 {
+  top: 68%;
+  left: 42%;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+.akira-container .front-tire__wheel .l3 {
+  top: 67.5%;
+  left: 51%;
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+}
+
+.akira-container .front-tire__wheel .l4 {
+  top: 65%;
+  left: 60%;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.akira-container .front-tire__wheel .l5 {
+  top: 64%;
+  left: 68%;
+  -webkit-transform: rotate(-16deg);
+          transform: rotate(-16deg);
 }
 
 .akira-container .back-tire {
