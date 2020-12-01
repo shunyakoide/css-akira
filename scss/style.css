@@ -25,6 +25,7 @@ body {
   background: #fff;
   min-height: 100vh;
   overflow: hidden;
+  background: #9b1908;
 }
 
 .Centering, .akira-container, .akira-container .front-tire__rim, .akira-container .front-tire__wheel, .akira-container .front-tire__wheel .naritasan::before, .akira-container .back-tire__wheel, .akira-container .back-tire__wheel__center, .akira-container .back-tire__b-screw__inner, .akira-container .back-tire__s-screw__inner, .akira-container .body-tank__screw__inner, .akira-container .body-tank__screw__inner__line, .akira-container .front-fender__inner__logo__circle, .akira-container .front-fender__inner__logo__circle__star, .akira-container .front-fork .bnw__inner, .akira-container .front-deck3__handle::before {
@@ -38,7 +39,6 @@ body {
   position: fixed;
   width: calc(900 * var(--unit));
   height: calc(500 * var(--unit));
-  border: 1px solid #000;
 }
 
 .akira-container .big-shadow {
@@ -55,6 +55,48 @@ body {
   border-radius: 50%;
 }
 
+.akira-container .small-shadow-front {
+  width: 20%;
+  height: 8%;
+  background: radial-gradient(rgba(0, 0, 0, 0.8) 30%, transparent);
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+  position: absolute;
+  top: 77%;
+  left: 20%;
+  -webkit-transform: translate(-50%, -79%);
+          transform: translate(-50%, -79%);
+  border-radius: 50%;
+}
+
+.akira-container .small-shadow-back {
+  width: 26%;
+  height: 10%;
+  background: radial-gradient(rgba(0, 0, 0, 0.8) 30%, transparent);
+  -webkit-filter: blur(9px);
+          filter: blur(9px);
+  position: absolute;
+  top: 77%;
+  left: 83%;
+  -webkit-transform: translate(-50%, -79%);
+          transform: translate(-50%, -79%);
+  border-radius: 50%;
+}
+
+.akira-container .small-shadow-middle {
+  width: 42%;
+  height: 15%;
+  background: radial-gradient(rgba(20, 13, 9, 0.8) 30%, transparent);
+  -webkit-filter: blur(9px);
+          filter: blur(9px);
+  position: absolute;
+  top: 78%;
+  left: 55%;
+  -webkit-transform: translate(-50%, -79%);
+          transform: translate(-50%, -79%);
+  border-radius: 50%;
+}
+
 .akira-container .front-tire {
   position: absolute;
   bottom: calc(120 * var(--unit));
@@ -63,8 +105,8 @@ body {
   height: calc(180 * var(--unit));
   border-radius: 50%;
   background: #242525;
-  -webkit-box-shadow: 1px 1px 10px -2px #e0e5e9 inset, -5px -5px 10px black inset;
-          box-shadow: 1px 1px 10px -2px #e0e5e9 inset, -5px -5px 10px black inset;
+  -webkit-box-shadow: 2px 2px 20px -10px #e0e5e9 inset, -10px -10px 20px black inset;
+          box-shadow: 2px 2px 20px -10px #e0e5e9 inset, -10px -10px 20px black inset;
 }
 
 .akira-container .front-tire__rim {
@@ -80,8 +122,8 @@ body {
   width: 65%;
   height: 65%;
   border-radius: 50%;
-  background: #ea3c13;
-  background: radial-gradient(circle at 10px 10px, #ea6c57, #ea3c13, #8f2814, #782322);
+  background: #cc210a;
+  background: radial-gradient(circle at 10px 10px, #f1615c, #cc210a, #8f2814, #782322);
   -webkit-box-shadow: -5px -5px 15px #3c1211 inset;
           box-shadow: -5px -5px 15px #3c1211 inset;
 }
@@ -161,7 +203,7 @@ body {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: calc(18.6 * var(--unit)) calc(9.3 * var(--unit)) 0 calc(9.3 * var(--unit));
+  border-width: calc(17 * var(--unit)) calc(9 * var(--unit)) 0 calc(9 * var(--unit));
   border-color: #230204 transparent transparent transparent;
 }
 
@@ -180,30 +222,30 @@ body {
   left: 45%;
   width: calc(11.5 * var(--unit));
   height: calc(11.5 * var(--unit));
-  background: #ea3c13;
+  background: #cc210a;
   border-radius: 50%;
 }
 
 .akira-container .front-tire__wheel .shoei__triangle__left {
   position: absolute;
-  bottom: 12%;
-  left: 27%;
+  bottom: 11.5%;
+  left: 28.5%;
   -webkit-transform: rotate(33deg);
           transform: rotate(33deg);
-  width: calc(18 * var(--unit));
-  height: calc(18 * var(--unit));
+  width: calc(16 * var(--unit));
+  height: calc(16 * var(--unit));
   background: #fff;
   border: 2px solid #686ba9;
 }
 
 .akira-container .front-tire__wheel .shoei__triangle__right {
   position: absolute;
-  bottom: 19%;
-  left: 62%;
+  bottom: 18.5%;
+  left: 63.5%;
   -webkit-transform: rotate(33deg);
           transform: rotate(33deg);
-  width: calc(18 * var(--unit));
-  height: calc(18 * var(--unit));
+  width: calc(16 * var(--unit));
+  height: calc(16 * var(--unit));
   background: #fff;
   border: 2px solid #686ba9;
 }
@@ -232,17 +274,17 @@ body {
 }
 
 .akira-container .front-tire__wheel .l1 {
-  top: 68%;
+  top: 70%;
   left: 33%;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
 }
 
 .akira-container .front-tire__wheel .l2 {
-  top: 68%;
+  top: 70%;
   left: 42%;
-  -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg);
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
 }
 
 .akira-container .front-tire__wheel .l3 {
@@ -253,10 +295,10 @@ body {
 }
 
 .akira-container .front-tire__wheel .l4 {
-  top: 65%;
+  top: 66%;
   left: 60%;
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
+  -webkit-transform: rotate(-12deg);
+          transform: rotate(-12deg);
 }
 
 .akira-container .front-tire__wheel .l5 {
@@ -274,8 +316,20 @@ body {
   height: calc(200 * var(--unit));
   border-radius: 50%;
   background: #242525;
-  -webkit-box-shadow: 2px 2px 10px #879aa9 inset, -5px -5px 10px black inset;
-          box-shadow: 2px 2px 10px #879aa9 inset, -5px -5px 10px black inset;
+  -webkit-box-shadow: 6px 6px 20px -4px #546776 inset, -5px -5px 25px black inset;
+          box-shadow: 6px 6px 20px -4px #546776 inset, -5px -5px 25px black inset;
+  overflow: hidden;
+}
+
+.akira-container .back-tire__shadow {
+  position: absolute;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  bottom: calc(-30 * var(--unit));
+  right: calc(60 * var(--unit));
+  width: calc(180 * var(--unit));
+  height: calc(250 * var(--unit));
+  background: linear-gradient(-70deg, transparent, rgba(0, 0, 0, 0.6));
 }
 
 .akira-container .back-tire__wheel {
@@ -283,7 +337,7 @@ body {
   width: 65%;
   height: 65%;
   border-radius: 50%;
-  background: radial-gradient(circle at 10px 10px, #fa7e61, #ea6c57, #ea3c13, #8f2814, #782322);
+  background: radial-gradient(circle at 10px 10px, #fa7e61, #f1615c, #cc210a, #8f2814, #782322);
 }
 
 .akira-container .back-tire__wheel__center {
@@ -291,7 +345,7 @@ body {
   width: 75%;
   height: 75%;
   border-radius: 50%;
-  background: linear-gradient(-200deg, #ea6c57, #ea3c13, #8f2814);
+  background: linear-gradient(-200deg, #f1615c, #cc210a, #8f2814);
 }
 
 .akira-container .back-tire__b-screw {
@@ -302,7 +356,7 @@ body {
   height: calc(32 * var(--unit));
   border-radius: 50%;
   background: #8f2814;
-  background: radial-gradient(circle at 10px 10px, #fa7e61, #ea6c57, #ea3c13, #8f2814, #782322);
+  background: radial-gradient(circle at 10px 10px, #fa7e61, #f1615c, #cc210a, #8f2814, #782322);
 }
 
 .akira-container .back-tire__b-screw__inner {
@@ -310,7 +364,7 @@ body {
   width: 70%;
   height: 70%;
   border-radius: 50%;
-  background: #ea3c13;
+  background: #cc210a;
 }
 
 .akira-container .back-tire__s-screw {
@@ -321,7 +375,7 @@ body {
   height: calc(22 * var(--unit));
   border-radius: 50%;
   background: #8f2814;
-  background: radial-gradient(circle at 5px 5px, #fa7e61, #ea6c57, #ea3c13, #8f2814, #782322);
+  background: radial-gradient(circle at 5px 5px, #fa7e61, #f1615c, #cc210a, #8f2814, #782322);
 }
 
 .akira-container .back-tire__s-screw__inner {
@@ -329,7 +383,7 @@ body {
   width: 79%;
   height: 79%;
   border-radius: 50%;
-  background: #ea3c13;
+  background: #cc210a;
 }
 
 .akira-container .back-tire-arm {
@@ -345,20 +399,22 @@ body {
 
 .akira-container .back-tire-arm__first {
   position: absolute;
-  bottom: 18%;
+  bottom: 27%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   width: calc(70 * var(--unit));
   height: calc(60 * var(--unit));
   background: #8f2814;
-  background: -webkit-gradient(linear, right top, left top, color-stop(20%, #ea6c57), color-stop(22%, #ea3c13), color-stop(78%, #ea3c13), color-stop(80%, #8f2814));
-  background: linear-gradient(-90deg, #ea6c57 20%, #ea3c13 22%, #ea3c13 78%, #8f2814 80%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(20%, #f1615c), color-stop(22%, #cc210a), color-stop(78%, #cc210a), color-stop(80%, #8f2814));
+  background: linear-gradient(-90deg, #f1615c 20%, #cc210a 22%, #cc210a 78%, #8f2814 80%);
+  -webkit-clip-path: polygon(-62.03% -41.88%, 105.54% -21.65%, 106.09% 77.44%, 76.53% 113%, 38.74% 107.23%, 1.53% 83.21%);
+          clip-path: polygon(-62.03% -41.88%, 105.54% -21.65%, 106.09% 77.44%, 76.53% 113%, 38.74% 107.23%, 1.53% 83.21%);
 }
 
 .akira-container .back-tire-arm__second {
   position: absolute;
-  bottom: 20%;
+  bottom: 30%;
   left: 50%;
   -webkit-transform: translate(-50%, -10%);
           transform: translate(-50%, -10%);
@@ -366,8 +422,8 @@ body {
   width: calc(70 * var(--unit));
   height: calc(50 * var(--unit));
   background: #782322;
-  background: -webkit-gradient(linear, right top, left top, color-stop(20%, #ea6c57), color-stop(22%, #ea3c13), color-stop(78%, #ea3c13), color-stop(80%, #8f2814));
-  background: linear-gradient(-90deg, #ea6c57 20%, #ea3c13 22%, #ea3c13 78%, #8f2814 80%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(20%, #f1615c), color-stop(22%, #cc210a), color-stop(78%, #cc210a), color-stop(80%, #8f2814));
+  background: linear-gradient(-90deg, #f1615c 20%, #cc210a 22%, #cc210a 78%, #8f2814 80%);
   -webkit-box-shadow: 0px 4px 3px #782322;
           box-shadow: 0px 4px 3px #782322;
 }
@@ -382,8 +438,8 @@ body {
   width: calc(70 * var(--unit));
   height: calc(48 * var(--unit));
   background: #8f2814;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(79%, #ea3c13), color-stop(85%, #d23611));
-  background: linear-gradient(0deg, #ea3c13 79%, #d23611 85%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(79%, #cc210a), color-stop(85%, #b41d09));
+  background: linear-gradient(0deg, #cc210a 79%, #b41d09 85%);
   -webkit-box-shadow: 0px 2px 3px #782322;
           box-shadow: 0px 2px 3px #782322;
 }
@@ -403,12 +459,12 @@ body {
 }
 
 .akira-container .back-tire-arm__third::before {
-  background: linear-gradient(-135deg, transparent 47%, #dc3812 48%);
+  background: linear-gradient(-135deg, transparent 47%, #bd1f09 48%);
 }
 
 .akira-container .back-tire-arm__third::after {
   left: 100%;
-  background: linear-gradient(45deg, transparent 47%, #ea6c57 48%);
+  background: linear-gradient(45deg, transparent 47%, #f1615c 48%);
 }
 
 .akira-container .middle-display1 {
@@ -430,7 +486,7 @@ body {
   height: calc(30 * var(--unit));
   -webkit-transform: rotate(25deg);
           transform: rotate(25deg);
-  background: linear-gradient(200deg, #7d3709, #3b2710 70%);
+  background: linear-gradient(200deg, #642c07, #3b2710 70%);
   -webkit-box-shadow: 2px 2px 4px 1px #c15027 inset;
           box-shadow: 2px 2px 4px 1px #c15027 inset;
 }
@@ -451,12 +507,12 @@ body {
   left: 10%;
   width: calc(70 * var(--unit));
   height: calc(40 * var(--unit));
-  background: #7d3709;
+  background: #642c07;
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
   border-radius: 20% 0 0 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #7d3709), color-stop(30%, #3b2710));
-  background: linear-gradient(#7d3709 10%, #3b2710 30%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #642c07), color-stop(30%, #3b2710));
+  background: linear-gradient(#642c07 10%, #3b2710 30%);
   -webkit-box-shadow: 1px 1px 2px 1px #81361a inset;
           box-shadow: 1px 1px 2px 1px #81361a inset;
 }
@@ -469,9 +525,9 @@ body {
   height: calc(18 * var(--unit));
   background: #f17d55;
   border-radius: 40% 40% 30% 30%;
-  background: radial-gradient(circle at 5px 5px, #3b2710, #7d3709);
-  -webkit-box-shadow: 2px 2px 5px -2px #7d3709 inset, -2px -2px 4px 0px #81361a inset, 2px 2px 5px 0px #7d3709;
-          box-shadow: 2px 2px 5px -2px #7d3709 inset, -2px -2px 4px 0px #81361a inset, 2px 2px 5px 0px #7d3709;
+  background: radial-gradient(circle at 5px 5px, #3b2710, #642c07);
+  -webkit-box-shadow: 2px 2px 5px -2px #642c07 inset, -2px -2px 4px 0px #81361a inset, 2px 2px 5px 0px #642c07;
+          box-shadow: 2px 2px 5px -2px #642c07 inset, -2px -2px 4px 0px #81361a inset, 2px 2px 5px 0px #642c07;
 }
 
 .akira-container .seat__back {
@@ -480,10 +536,10 @@ body {
   right: 5%;
   width: 16%;
   height: 78%;
-  background: #7d3709;
-  background: linear-gradient(160deg, #4f3415 70%, #c15027 72%, #733308 74%);
-  -webkit-box-shadow: 2px 2px 2px 0px #7d3709 inset;
-          box-shadow: 2px 2px 2px 0px #7d3709 inset;
+  background: #642c07;
+  background: linear-gradient(160deg, #4f3415 70%, #c15027 72%, #5a2806 74%);
+  -webkit-box-shadow: 2px 2px 2px 0px #642c07 inset;
+          box-shadow: 2px 2px 2px 0px #642c07 inset;
 }
 
 .akira-container .seat__head {
@@ -508,9 +564,9 @@ body {
   border-radius: 0% 0% 70% 20% / 0% 0% 70% 20%;
   -webkit-transform: rotate(35deg);
           transform: rotate(35deg);
-  background: linear-gradient(200deg, #ea3c13 10%, #8f2814 40%, #782322);
-  -webkit-box-shadow: 1px 4px 4px 1px #cc3319 inset;
-          box-shadow: 1px 4px 4px 1px #cc3319 inset;
+  background: linear-gradient(200deg, #cc210a 10%, #8f2814 40%, #782322);
+  -webkit-box-shadow: 1px 4px 4px 1px #de1a13 inset;
+          box-shadow: 1px 4px 4px 1px #de1a13 inset;
 }
 
 .akira-container .body-tank__screw {
@@ -520,20 +576,20 @@ body {
   width: calc(45 * var(--unit));
   height: calc(45 * var(--unit));
   border-radius: 50%;
-  background: #ea6c57;
-  background: linear-gradient(200deg, #ea3c13 20%, #982b15);
-  -webkit-box-shadow: 0px 4px 3px -2px #e75840 inset;
-          box-shadow: 0px 4px 3px -2px #e75840 inset;
+  background: #f1615c;
+  background: linear-gradient(200deg, #cc210a 20%, #982b15);
+  -webkit-box-shadow: 0px 4px 3px -2px #ef4a45 inset;
+          box-shadow: 0px 4px 3px -2px #ef4a45 inset;
 }
 
 .akira-container .body-tank__screw__inner {
   position: absolute;
   width: 75%;
   height: 75%;
-  background: #ea3c13;
+  background: #cc210a;
   border-radius: 50%;
   overflow: hidden;
-  background: linear-gradient(200deg, #ea3c13 20%, #982b15);
+  background: linear-gradient(200deg, #cc210a 20%, #982b15);
   -webkit-box-shadow: 2px 4px 3px -1px #fa7e61 inset, -2px -4px 2px 0px #782322 inset, 3px 2px 5px 1px #8f2814;
           box-shadow: 2px 4px 3px -1px #fa7e61 inset, -2px -4px 2px 0px #782322 inset, 3px 2px 5px 1px #8f2814;
 }
@@ -543,9 +599,9 @@ body {
   width: 20%;
   height: 100%;
   background: #8f2814;
-  background: linear-gradient(200deg, #ea3c13 10%, #b33219);
-  -webkit-box-shadow: 3px 0px 3px -1px #782322 inset, -2px 0px 2px -1px #ea3c13 inset;
-          box-shadow: 3px 0px 3px -1px #782322 inset, -2px 0px 2px -1px #ea3c13 inset;
+  background: linear-gradient(200deg, #cc210a 10%, #b33219);
+  -webkit-box-shadow: 3px 0px 3px -1px #782322 inset, -2px 0px 2px -1px #cc210a inset;
+          box-shadow: 3px 0px 3px -1px #782322 inset, -2px 0px 2px -1px #cc210a inset;
 }
 
 .akira-container .body-seat {
@@ -565,7 +621,7 @@ body {
   -webkit-transform: rotate(60deg);
           transform: rotate(60deg);
   overflow: hidden;
-  background: linear-gradient(-3deg, #ea3c13 50%, transparent 50%);
+  background: linear-gradient(-3deg, #8f2814 50%, transparent 50%);
   -webkit-box-shadow: 0px -2px 5px 0px #782322 inset;
           box-shadow: 0px -2px 5px 0px #782322 inset;
 }
@@ -579,9 +635,9 @@ body {
   -webkit-transform: rotate(25deg);
           transform: rotate(25deg);
   overflow: hidden;
-  background: linear-gradient(-5deg, #ea3c13 80%, transparent 80%);
-  -webkit-box-shadow: -1px -4px 4px -2px #782322 inset;
-          box-shadow: -1px -4px 4px -2px #782322 inset;
+  background: linear-gradient(-5deg, #8f2814 68%, #f1615c 75%, transparent 80%);
+  -webkit-box-shadow: -1px -6px 4px -2px #782322 inset;
+          box-shadow: -1px -6px 4px -2px #782322 inset;
 }
 
 .akira-container .body-seat__bottom {
@@ -590,7 +646,7 @@ body {
   left: 35%;
   width: calc(100 * var(--unit));
   height: calc(20 * var(--unit));
-  background: #ea3c13;
+  background: #cc210a;
 }
 
 .akira-container .body-seat__bottom-box {
@@ -599,35 +655,39 @@ body {
   left: 28%;
   width: calc(120 * var(--unit));
   height: calc(70 * var(--unit));
-  background: #ea3c13;
+  background: #cc210a;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #ea3c13), color-stop(98%, #8f2814));
-  background: linear-gradient(#ea3c13 90%, #8f2814 98%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #cc210a), color-stop(80%, #8f2814), to(#6c201f));
+  background: linear-gradient(180deg, #cc210a 30%, #8f2814 80%, #6c201f);
 }
 
 .akira-container .body-seat__bottom-box__inner {
   position: absolute;
   bottom: 49%;
-  left: -19%;
+  left: -18%;
   width: calc(150 * var(--unit));
-  height: calc(70 * var(--unit));
+  height: calc(72 * var(--unit));
   background: #782322;
   border-radius: 50%;
   -webkit-transform: rotate(-32deg);
           transform: rotate(-32deg);
-  background: linear-gradient(265deg, #ea3c13 30%, #8f2814 65%, #822412);
+  background: linear-gradient(265deg, #8f2814 2%, #cc210a 30%, #8f2814 65%, #822412);
+  -webkit-box-shadow: 6px 6px 3px -1px #f1615c;
+          box-shadow: 6px 6px 3px -1px #f1615c;
 }
 
 .akira-container .body-seat__circle {
   position: absolute;
   bottom: 0%;
-  left: 47%;
+  left: 46.8%;
   width: calc(90 * var(--unit));
   height: calc(80 * var(--unit));
   border-radius: 50%;
-  background: #ea3c13;
+  background: linear-gradient(200deg, #cc210a 40%, #8f2814 75%, #822412);
   -webkit-transform: rotate(-25deg);
           transform: rotate(-25deg);
+  -webkit-box-shadow: 6px 6px 3px -1px #f1615c inset;
+          box-shadow: 6px 6px 3px -1px #f1615c inset;
 }
 
 .akira-container .body-seat__back {
@@ -636,11 +696,11 @@ body {
   left: 65%;
   width: calc(40 * var(--unit));
   height: calc(130 * var(--unit));
-  background: #ea3c13;
+  background: #cc210a;
   -webkit-transform: rotate(25deg);
           transform: rotate(25deg);
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(63%, #ea3c13), color-stop(65%, #ea6c57), color-stop(75%, #ea3c13));
-  background: linear-gradient(0deg, #ea3c13 63%, #ea6c57 65% 72%, #ea3c13 75%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(80%, #cc210a), color-stop(85%, #f1615c), to(#cc210a));
+  background: linear-gradient(-90deg, #cc210a 80%, #f1615c 85% 90%, #cc210a 100%);
 }
 
 .akira-container .body-seat__back::before {
@@ -650,10 +710,10 @@ body {
   right: 3%;
   width: calc(30 * var(--unit));
   height: calc(40 * var(--unit));
-  background: #ea3c13;
+  background: #cc210a;
   -webkit-transform: rotate(35deg);
           transform: rotate(35deg);
-  background: linear-gradient(25deg, #ea3c13 30%, #ed471f);
+  background: linear-gradient(25deg, #cc210a 30%, #db230b);
 }
 
 .akira-container .body-seat__back__head {
@@ -662,14 +722,14 @@ body {
   left: 48%;
   width: calc(84 * var(--unit));
   height: calc(50 * var(--unit));
-  background: #ea3c13;
+  background: #cc210a;
   border-radius: 0% 100% 0% 0% / 0% 100% 0% 0%;
   -webkit-transform: rotate(-35deg);
           transform: rotate(-35deg);
   overflow: hidden;
-  background: linear-gradient(60deg, #ea3c13 20%, #8f2814);
-  -webkit-box-shadow: 0px 5px 3px -2px #ea6c57 inset, -3px -4px 3px 0px #782322 inset;
-          box-shadow: 0px 5px 3px -2px #ea6c57 inset, -3px -4px 3px 0px #782322 inset;
+  background: linear-gradient(60deg, #cc210a 20%, #8f2814);
+  -webkit-box-shadow: 0px 5px 3px -2px #f1615c inset, -3px -4px 3px 0px #782322 inset;
+          box-shadow: 0px 5px 3px -2px #f1615c inset, -3px -4px 3px 0px #782322 inset;
 }
 
 .akira-container .body-seat__back__head__light {
@@ -683,9 +743,9 @@ body {
   -webkit-transform: rotate(15deg);
           transform: rotate(15deg);
   overflow: hidden;
-  border-bottom: 2px solid #ea6c57;
+  border-bottom: 2px solid #f1615c;
   border-left: 1px solid #fa7e61;
-  background: linear-gradient(340deg, #ea3c13, #782322);
+  background: linear-gradient(340deg, #cc210a, #782322);
 }
 
 .akira-container .body-seat__back__head__light__inner {
@@ -694,11 +754,11 @@ body {
   left: -10%;
   width: calc(30 * var(--unit));
   height: calc(20 * var(--unit));
-  background: #ea3c13;
+  background: #cc210a;
   border-radius: 50%;
-  background: linear-gradient(60deg, #ea3c13 20%, #8f2814);
-  -webkit-box-shadow: 3px 2px 3px -1px #ea6c57 inset;
-          box-shadow: 3px 2px 3px -1px #ea6c57 inset;
+  background: linear-gradient(60deg, #cc210a 20%, #8f2814);
+  -webkit-box-shadow: 3px 2px 3px -1px #f1615c inset;
+          box-shadow: 3px 2px 3px -1px #f1615c inset;
 }
 
 .akira-container .body-seat__back-bottom {
@@ -707,7 +767,7 @@ body {
   left: 63%;
   width: calc(50 * var(--unit));
   height: calc(60 * var(--unit));
-  background: #ea3c13;
+  background: linear-gradient(200deg, #cc210a 60%, #8f2814 95%);
   -webkit-transform: rotate(-25deg);
           transform: rotate(-25deg);
 }
@@ -718,11 +778,11 @@ body {
   left: 47%;
   width: calc(80 * var(--unit));
   height: calc(40 * var(--unit));
-  background: #ea3c13;
+  background: #cc210a;
   border-radius: 80% 30% 30% 10%/ 85% 50% 50% 10%;
-  background: linear-gradient(170deg, #ea3c13 20%, #982b15);
-  -webkit-box-shadow: 3px 2px 3px -1px #ea6c57 inset, 2px -4px 2px 0px #782322 inset;
-          box-shadow: 3px 2px 3px -1px #ea6c57 inset, 2px -4px 2px 0px #782322 inset;
+  background: linear-gradient(170deg, #cc210a 20%, #982b15);
+  -webkit-box-shadow: 3px 2px 3px -1px #f1615c inset, 2px -4px 2px 0px #782322 inset;
+          box-shadow: 3px 2px 3px -1px #f1615c inset, 2px -4px 2px 0px #782322 inset;
 }
 
 .akira-container .body-seat__s-side-part__screw {
@@ -735,10 +795,10 @@ body {
   height: calc(30 * var(--unit));
   border-radius: 50%;
   background: #8f2814;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #ea3c13), to(#982b15));
-  background: linear-gradient(180deg, #ea3c13 20%, #982b15);
-  -webkit-box-shadow: 3px 3px 3px 1px #8f2814 inset, -3px -2px 1px 0px #ea3c13 inset;
-          box-shadow: 3px 3px 3px 1px #8f2814 inset, -3px -2px 1px 0px #ea3c13 inset;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #cc210a), to(#982b15));
+  background: linear-gradient(180deg, #cc210a 20%, #982b15);
+  -webkit-box-shadow: 3px 3px 3px 1px #8f2814 inset, -3px -2px 1px 0px #cc210a inset;
+          box-shadow: 3px 3px 3px 1px #8f2814 inset, -3px -2px 1px 0px #cc210a inset;
 }
 
 .akira-container .body-seat__b-side-part {
@@ -751,9 +811,9 @@ body {
   border-radius: 100% 65% 56% 60% / 100% 67% 81% 60%;
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
-  background: linear-gradient(170deg, #ea3c13 20%, #982b15);
-  -webkit-box-shadow: 2px 4px 3px -1px #ea6c57 inset, -2px -4px 2px 0px #782322 inset;
-          box-shadow: 2px 4px 3px -1px #ea6c57 inset, -2px -4px 2px 0px #782322 inset;
+  background: linear-gradient(170deg, #cc210a 20%, #982b15);
+  -webkit-box-shadow: 2px 4px 3px -1px #f1615c inset, -2px -4px 2px 0px #782322 inset;
+          box-shadow: 2px 4px 3px -1px #f1615c inset, -2px -4px 2px 0px #782322 inset;
 }
 
 .akira-container .body-seat__b-side-part__screw {
@@ -766,10 +826,10 @@ body {
   height: calc(40 * var(--unit));
   border-radius: 50%;
   background: #8f2814;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #ea3c13), to(#982b15));
-  background: linear-gradient(180deg, #ea3c13 20%, #982b15);
-  -webkit-box-shadow: 5px 5px 3px 1px #8f2814 inset, -4px -4px 1px 0px #ea3c13 inset;
-          box-shadow: 5px 5px 3px 1px #8f2814 inset, -4px -4px 1px 0px #ea3c13 inset;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #cc210a), to(#982b15));
+  background: linear-gradient(180deg, #cc210a 20%, #982b15);
+  -webkit-box-shadow: 5px 5px 3px 1px #8f2814 inset, -4px -4px 1px 0px #cc210a inset;
+          box-shadow: 5px 5px 3px 1px #8f2814 inset, -4px -4px 1px 0px #cc210a inset;
 }
 
 .akira-container .front-fender {
@@ -792,7 +852,7 @@ body {
   -webkit-transform: rotate(3deg);
           transform: rotate(3deg);
   border-radius: 75% 0 0 0;
-  background: radial-gradient(farthest-corner at calc(150 * var(--unit)) calc(-120 * var(--unit)), transparent 65%, #fa7e61 66%, #ea3c13 65%, #8f2814 75%, #782322 85% 100%);
+  background: radial-gradient(farthest-corner at calc(150 * var(--unit)) calc(-120 * var(--unit)), transparent 65%, #fa7e61 66%, #cc210a 65%, #8f2814 75%, #782322 85% 100%);
   -webkit-box-shadow: 5px 0px 3px 0px #fa7e61 inset;
           box-shadow: 5px 0px 3px 0px #fa7e61 inset;
 }
@@ -810,8 +870,8 @@ body {
 .akira-container .front-fender__inner__logo__box {
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(25%, #ea3c13), color-stop(65%, #fff));
-  background: linear-gradient(#fff 0% 25%, #ea3c13 25% 65%, #fff 65% 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(25%, #cc210a), color-stop(65%, #fff));
+  background: linear-gradient(#fff 0% 25%, #cc210a 25% 65%, #fff 65% 100%);
   border: 1px solid #686ba9;
 }
 
@@ -843,9 +903,9 @@ body {
   -webkit-clip-path: polygon(-8.76% -16px, 95.69% -48.99%, 115.74% 34.85%, -17px 106.76%);
           clip-path: polygon(-8.76% -16px, 95.69% -48.99%, 115.74% 34.85%, -17px 106.76%);
   border-radius: 3px 3px 0 5px;
-  background: linear-gradient(170deg, #ea3c13, #8f2814 50% 80%, #782322 95% 100%);
-  -webkit-box-shadow: 1px 2px 5px 0px #ea6c57 inset;
-          box-shadow: 1px 2px 5px 0px #ea6c57 inset;
+  background: linear-gradient(170deg, #cc210a, #8f2814 50% 80%, #782322 95% 100%);
+  -webkit-box-shadow: 1px 2px 5px 0px #f1615c inset;
+          box-shadow: 1px 2px 5px 0px #f1615c inset;
   overflow: hidden;
 }
 
@@ -856,13 +916,13 @@ body {
   top: 20%;
   left: 20%;
   height: calc(28 * var(--unit));
-  background: #fff;
-  color: #ea3c13;
+  background: #fce4e4;
+  color: #cc210a;
   font-size: calc(30 * var(--unit));
   font-family: canon;
   letter-spacing: calc(1 * var(--unit));
   padding: 0 calc(2 * var(--unit));
-  border: calc(2 * var(--unit)) solid #ea3c13;
+  border: calc(2 * var(--unit)) solid #cc210a;
 }
 
 .akira-container .front-fork .citizen {
@@ -982,7 +1042,7 @@ body {
           transform-origin: center;
   -webkit-transform: skew(45deg);
           transform: skew(45deg);
-  background: linear-gradient(170deg, #ea3c13, #8f2814);
+  background: linear-gradient(170deg, #cc210a, #8f2814);
   -webkit-box-shadow: 1px 1px 1px 0px #fa7e61 inset, -1px -1px 2px 0px #782322 inset;
           box-shadow: 1px 1px 1px 0px #fa7e61 inset, -1px -1px 2px 0px #782322 inset;
 }
